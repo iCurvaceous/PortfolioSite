@@ -1,0 +1,143 @@
+#pragma strict
+//***** cauldronScore script adds score when skull enters cauldron
+import UnityEngine.UI;
+var score:int = 0;
+var gameManager:GameObject;
+var skullScores:GameObject[];
+var chosenSkull:String;
+var	clips:AudioClip[];
+
+function Start () {
+
+}
+
+function OnTriggerEnter(col :Collider){
+	score++;
+	//load name of skull in picker
+	chosenSkull = gameManager.GetComponent.<GameManager>().chosenSkullName;
+	GetComponent.<AudioSource>().PlayOneShot(clips[(Random.Range(0, clips.length))]);
+
+	if(col.gameObject.tag == "purple"){
+		// red skull
+		if(chosenSkull == "purple"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[0].GetComponent.<FallingObject>().startPos, skullScores[0]);
+			// Add to the score
+			skullScores[0].GetComponent.<FallingObject>().score++;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(0, skullScores[0].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[0].GetComponent.<FallingObject>().startPos, skullScores[0]);
+		}
+	}
+
+
+	if(col.gameObject.tag == "yellow"){
+		// yellow skull
+		if(chosenSkull == "yellow"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[1].GetComponent.<FallingObject>().startPos, skullScores[1]);
+			// Add to the score
+			skullScores[1].GetComponent.<FallingObject>().score++;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(1, skullScores[1].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[1].GetComponent.<FallingObject>().startPos, skullScores[1]);
+		}
+	}
+
+	if(col.gameObject.tag == "pink"){
+		// green skull
+		if(chosenSkull == "pink"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[2].GetComponent.<FallingObject>().startPos, skullScores[2]);
+			// Add to the score
+			skullScores[2].GetComponent.<FallingObject>().score++;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(2, skullScores[2].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[2].GetComponent.<FallingObject>().startPos, skullScores[2]);
+		}
+	}
+
+	if(col.gameObject.tag == "blue"){
+		// blue skull
+		if(chosenSkull == "blue"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[3].GetComponent.<FallingObject>().startPos, skullScores[3]);
+			// Add to the score
+			skullScores[3].GetComponent.<FallingObject>().score++;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(3, skullScores[3].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[3].GetComponent.<FallingObject>().startPos, skullScores[3]);
+		}
+	}
+
+	if(col.gameObject.tag == "green"){
+		// green skull
+		if(chosenSkull == "green"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[4].GetComponent.<FallingObject>().startPos, skullScores[4]);
+			// Add to the score
+			skullScores[4].GetComponent.<FallingObject>().score++;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(4, skullScores[4].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[4].GetComponent.<FallingObject>().startPos, skullScores[4]);
+		}
+	}
+
+		if(col.gameObject.tag == "red"){
+		// black skull
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[5].GetComponent.<FallingObject>().startPos, skullScores[5]);
+			// Add to the score
+			skullScores[5].GetComponent.<FallingObject>().score = skullScores[5].GetComponent.<FallingObject>().score - 10;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(5, skullScores[5].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		
+	}
+
+
+	if(col.gameObject.tag == "rainbow"){
+		// gold skull
+		if(chosenSkull == "rainbow"){
+			// Reset Position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[6].GetComponent.<FallingObject>().startPos, skullScores[6]);
+			// Add to the score
+			skullScores[6].GetComponent.<FallingObject>().score = skullScores[6].GetComponent.<FallingObject>().score + 10 ;
+			// Update screen score
+			gameManager.GetComponent.<GameManager>().AddScore(6, skullScores[6].GetComponent.<FallingObject>().score);
+			// Pick next skull
+			gameManager.GetComponent.<GameManager>().PickSkull();
+		}	else	{
+			// or reset position
+			gameManager.GetComponent.<GameManager>().Reset(skullScores[6].GetComponent.<FallingObject>().startPos, skullScores[6]);
+		}
+	}
+
+
+
+
+}
+function Update () {
+	
+}
