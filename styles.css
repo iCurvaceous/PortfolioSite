@@ -26,7 +26,8 @@ body {
 
 /* ---- CONTENT STYLING ---- */
 #content {
-	width:50%;
+	float: left;
+	width:100%;
 	padding-top:100px;
 	padding-bottom:20px;
 	margin:auto;
@@ -51,7 +52,11 @@ p a:hover {
 #content p a:active {
 	color:#00ffc6;
 }
-
+#bio p {
+	text-indent: inherit;
+	text-align:justify;
+	vertical-align: middle;
+}
 /* ---- NAME BAR ---- */
 #main-header{
 	position: fixed;
