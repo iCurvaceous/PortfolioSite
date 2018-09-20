@@ -24,10 +24,92 @@ body {
 	color: purple;
 }
 
+.about-title {
+	float: right;
+	text-align:center;
+	margin:0px;
+	line-height:70px;
+	background-color:lavender;
+	color: purple;
+	width: 100%;
+
+}
+#right-side {
+	float: right;
+	display:inline;
+	margin:0px;
+	width: 60%;
+}
+#bio {
+	float:right;
+	margin: 0px;
+	width: 100%;
+	background-color:white;
+}
+#bio p {
+	vertical-align: middle;
+	padding: 60px 20px;
+}
+#liner1 {
+	font-family: Arial, san-serif;
+	font-size: 21px;
+	text-align:center;
+}
+#liner2 {
+	font-family: Arial, san-serif;
+	font-size: 21px;
+	text-align:center;
+}
+#liner3 {
+	font-family: Arial, san-serif;
+	font-size: 21px;
+	text-align:center;
+}
+.prev2{
+  cursor: pointer;
+  position: absolute;
+  margin-left: -10px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+}
+.next2 {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+}
+
+.design-p {
+	text-align: center;
+}
+#contact-content {
+	float: center;
+	width:70%;
+	padding-top:100px;
+	padding-bottom:20px;
+	margin:auto;
+	background-color:#d3d3d3;
+	box-shadow:2px 1px 6px white;
+	font-size:14px;
+}
+#about-content {
+	display:inline;
+	width:100%;
+	padding-top:100px;
+	background-color:#d3d3d3;
+	box-shadow:2px 1px 6px white;
+	font-size:14px;
+}
 /* ---- CONTENT STYLING ---- */
 #content {
-	float: left;
-	width:100%;
+	float: center;
+	width:50%;
 	padding-top:100px;
 	padding-bottom:20px;
 	margin:auto;
@@ -52,11 +134,7 @@ p a:hover {
 #content p a:active {
 	color:#00ffc6;
 }
-#bio p {
-	text-indent: inherit;
-	text-align:justify;
-	vertical-align: middle;
-}
+
 /* ---- NAME BAR ---- */
 #main-header{
 	position: fixed;
@@ -88,7 +166,7 @@ footer {
     text-align: center;
     color: black;
 	padding-bottom: 40px;
-	border:1px solid red;
+	/*border:1px solid red;*/
 }
 
 /* ---- NAV BOTTOM BAR ---- */
